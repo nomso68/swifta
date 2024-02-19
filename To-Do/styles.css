@@ -1,114 +1,116 @@
 body {
-    width: 100%;
-    margin: 0;
-    background-color: #DBE2E9;
-    color: #DBE2E9;
-    font-size: 16px;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  
-  .form-body {
-    background-color: #222222;
-    width: 85%;
-    margin: 20px auto;
-    height: 85vh;
-    padding: 20px;
-    border: solid 5px #008080;
-  }
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  background-color: #DBE2E9;
+  color: #DBE2E9;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.form-body {
+  background-color: #222222;
+  margin: 0px auto;
   
   
-  form {
-    width: 80vw;
-    min-width: 300px;
-    margin: 0 auto;
-    padding-left: 80px;
-  }
   
-  h1 , p {
-    text-align: center;}
-  
-  input[type = text], textarea {
-    color: #DBE2E9;
-    margin: 0 auto;
-    height: 2em;
-    font-size: 15px;
-    background-color: #3b3b4f;
-    border: solid 5px #008080;
-    width: 79%;
-    padding-left: 5px;
-    text-align: center;
-  }
+  border: solid 5px #008080;
+}
+
+
+form {
+  width: 80vw;
+	max-width: 500px;
+	min-width: 300px;
+	margin: 0 auto;
+  padding-bottom: 2em;
+  height: 100vw;
+}
+
+h1 , p {
+  text-align: center;}
+
+label {
+	margin: 0.5rem 0;
+}
+
+input[type = text], textarea {
+  color: #DBE2E9;
+  font-size: 15px;
+  background-color: #3b3b4f;
+  border: solid 5px #008080;
+  text-align: center;
+  margin: 10px 0 0 0;
+	width: 80%;
+  min-height: 2em;
+  border-radius: 8px;
+}
 
 
 ::placeholder {
-  color: #DBE2E9;
+color: #DBE2E9;
+margin-left: -80px;
 }  
+
+.inline {
+  display: inline;
+  vertical-align: middle;
+}
+
+fieldset {
+  border: none;
+}
+
+textarea {
  
-  .inline {
-    display: inline;
-    vertical-align: middle;
-  }
-  
-  fieldset {
-    border: none;
-  }
-  
-  textarea {
-    width: 100%;
-  }
-  
-  .addButton {
-    border: solid 5px #008080;
-    color: #DBE2E9;
-    width: 42px;
-    font-weight: bold;
-    margin: 0px auto;
-    height: 42px;
-    font-size: 30px;
-    background-color: #3b3b4f;
-  }
+}
 
-  .removeButton {
-    background-color: #3b3b4f;
-    position: absolute;
-    margin-top: -10px;
-    right: 230px;
-    height: 25px;
-    width: 25px;
-    border: solid 5px #008080;
-    color: #DBE2E9;
-    text-align: center;
-    margin: 0 auto;
-    padding-bottom: 5px;
-    padding-top: 5px;
-    font-size: 5px;
-  }
+.addButton {
+  border: solid 5px #008080;
+  color: #DBE2E9;
+  font-weight: bold;
+  font-size: 24px;
+  background-color: #3b3b4f;
+  text-align: center;
+  margin: 10px 0 0 0;
+	width: 15%;
+  min-height: 1.75em;
+  border-radius: 8px;
+}
 
-  li {
-    padding-bottom: 10px;
-    padding-top: 10px;
-  }
+.removeButton {
+  background-color: transparent;
+  height: 20px;
+  width: 20px;
+  border: solid 5px #008080;
+  color: #008080;
+  text-align: center;
+  border: none;
 
-  .done {
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
+}
 
-  .edit-list, .doneButton, .save-list {
-    color: #DBE2E9;
-    margin: 0 auto;
-    height: 2em;
-    font-size: 15px;
-    background-color: #3b3b4f;
-    border: solid 5px #008080;
-    width: 85.25%;
-    padding-left: 5px;
-  }  
+li {
   
-  ul {
-    list-style: none;
-  }
+}
+
+.done {
   
-  
-  
+}
+
+.edit-list, .doneButton, .save-list {
+  color: #DBE2E9;
+  text-align: center;
+  margin: 10px auto 0;
+  width: 99%;
+  font-size: 15px;
+  background-color: #3b3b4f;
+  border: solid 5px #008080;
+  height: 2.5em;
+  border-radius: 8px;
+}  
+
+ul {
+  list-style: none;
+}
+
 

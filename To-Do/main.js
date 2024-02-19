@@ -22,22 +22,23 @@ editList.addEventListener('click', (editor) => {
 
 addButton.addEventListener('click', (item) => {
     item.preventDefault();
-    const li = document.createElement('li');
+    let li = document.createElement('li');
     li.appendChild(document.createTextNode(`${nameInput.value}`));
     ul.appendChild(li);
     nameInput.value = '';
     let removeItem = document.createElement('button');
     li.appendChild(removeItem);
     removeItem.innerHTML = 'X';
+    removeItem.contentEditable = false;
     removeItem.classList.add('removeButton')
     removeItem.addEventListener('click', (clear) => {
         li.remove();
     })
 });
 
-save.addEventListener('click', (listData) => {
 
-})
+
+
 
 
 

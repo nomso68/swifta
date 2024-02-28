@@ -1,0 +1,116 @@
+body {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  background-color: #DBE2E9;
+  color: #DBE2E9;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.form-body {
+  background-color: #222222;
+  margin: 0px auto;
+  
+  
+  
+  border: solid 5px #008080;
+}
+
+
+form {
+  width: 80vw;
+	max-width: 500px;
+	min-width: 300px;
+	margin: 0 auto;
+  padding-bottom: 2em;
+  height: 100vw;
+}
+
+h1 , p {
+  text-align: center;}
+
+label {
+	margin: 0.5rem 0;
+}
+
+input[type = text], textarea {
+  color: #DBE2E9;
+  font-size: 15px;
+  background-color: #3b3b4f;
+  border: solid 5px #008080;
+  text-align: center;
+  margin: 10px 0 0 0;
+	width: 80%;
+  min-height: 2em;
+  border-radius: 8px;
+}
+
+
+::placeholder {
+color: #DBE2E9;
+margin-left: -80px;
+}  
+
+.inline {
+  display: inline;
+  vertical-align: middle;
+}
+
+fieldset {
+  border: none;
+}
+
+textarea {
+ 
+}
+
+.addButton {
+  border: solid 5px #008080;
+  color: #DBE2E9;
+  font-weight: bold;
+  font-size: 24px;
+  background-color: #3b3b4f;
+  text-align: center;
+  margin: 10px 0 0 0;
+	width: 15%;
+  min-height: 1.75em;
+  border-radius: 8px;
+}
+
+.removeButton {
+  background-color: transparent;
+  height: 20px;
+  width: 20px;
+  border: solid 5px #008080;
+  color: #008080;
+  text-align: center;
+  border: none;
+
+}
+
+li {
+  
+}
+
+.done {
+  
+}
+
+.edit-list, .doneButton, .save-list {
+  color: #DBE2E9;
+  text-align: center;
+  margin: 10px auto 0;
+  width: 99%;
+  font-size: 15px;
+  background-color: #3b3b4f;
+  border: solid 5px #008080;
+  height: 2.5em;
+  border-radius: 8px;
+}  
+
+ul {
+  list-style: none;
+}
+
+

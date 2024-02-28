@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML 5 Boilerplate</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="">
+<header class="header2">
+    <a href="index.html">
+        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 512 512">
+            <title>ionicons-v5-a</title>
+            <polyline points="244 400 100 256 244 112" style="fill:none;stroke:aliceblue;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px"/>
+            <line x1="120" y1="256" x2="412" y2="256" style="fill:none;stroke:aliceblue;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px"/>
+        </svg>
+    </a>
+    <h1>Edit Customer Profile</h1>
+</header>
+<main>
+    <form id="edit-customer-form">
+        <label for="image">Image:</label>
+        <input type="file" id="image" name="image" accept="image/*"><br>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+        <label for="phone">Phone:</label>
+        <input type="text" id="phone" name="phone" required><br>
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" required><br>
+        <!-- Display area for image URL -->
+        <div id="image-url"></div><br>
+        <button id="save" type="submit">Save Changes</button>
+    </form>
+</main>
+<script>
+    // Function to edit a customer
+    let editCustomer = (index, newImage, newName, newPhone, newAddress) => {
+        let cleanlist = JSON.parse(localStorage.getItem('items'));
+        cleanlist[index].image = newImage;
+        cleanlist[index].name = newName;
+        cleanlist[index].phone = newPhone;
+        cleanlist[index].address = newAddress;
+        localStorage.setItem('items', JSON.stringify(cleanlist));
+        window.location.href = 'index.html'; // Redirect back to display page
+    };
+
+    // Function to pre-fill customer details in the form
+    window.onload = () => {
+        const urlParams = new URLSearchParams(window.location.search);
+        const index = parseInt(urlParams.get('index'));
+        const cleanlist = JSON.parse(localStorage.getItem('items'));
+        const customer = cleanlist[index];
+        document.getElementById('name').value = customer.name;
+        document.getElementById('phone').value = customer.phone;
+        document.getElementById('address').value = customer.address;
+        // Display image URL if available
+        if (customer.image) {
+            document.getElementById('image-url').innerHTML = `Image URL: <a href="${customer.image}" target="_blank">${customer.image}</a>`;
+        }
+    };
+
+    // Event listener for file input change
+    document.getElementById('image').addEventListener('change', (event) => {
+        const file = event.target.files[0];
+        if (file) {
+            // Read file URL and display it
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                const imageUrl = e.target.result;
+                document.getElementById('image-url').innerHTML = `Image URL: <a href="${imageUrl}" target="_blank">${imageUrl}</a>`;
+            };
+            reader.readAsDataURL(file);
+        }
+    });
+
+    // Event listener for form submission
+    document.getElementById('edit-customer-form').addEventListener('submit', (event) => {
+        event.preventDefault();
+        const urlParams = new URLSearchParams(window.location.search);
+        const index = parseInt(urlParams.get('index'));
+        const newImage = document.getElementById('image').value;
+        const newName = document.getElementById('name').value;
+        const newPhone = document.getElementById('phone').value;
+        const newAddress = document.getElementById('address').value;
+        editCustomer(index, newImage, newName, newPhone, newAddress);
+    });
+</script>
+</body>
+</html>

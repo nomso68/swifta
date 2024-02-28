@@ -1,0 +1,112 @@
+body, .addButton {
+    font-family: Tahoma;
+    margin: 0;
+}
+
+body{
+    text-align: center;
+}
+
+.header {
+    text-align: center;
+    padding: 10px 0px;        
+    background-color: #0a0a23;
+    color: #fff;
+    width: 100%;
+}
+
+
+h1 {
+    text-align: center;
+}
+
+.addButton, #add, #save, #edit, #delete {
+    background-color: #000080;
+    margin: 20px;
+    border: none;
+    color: aliceblue;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+#add, #save {
+    background-color: #32CD32;
+}
+
+#delete {
+    background-color: #ff0000;
+}
+
+#edit {
+    background-color: aliceblue;
+    color: #0a0a23;
+}
+
+#edit, #delete {
+    margin: 0;
+    width: 68px;
+}    
+
+.body2 {
+    background: #0a0a23;
+    color: aliceblue;
+}
+
+form {
+    width: 60vw;
+      max-width: 500px;
+      min-width: 300px;
+      margin: 0 auto;
+    padding-bottom: 2em;
+  }
+
+  label {
+    display: block;
+    margin: 0.5rem 0;
+    text-align: left;
+    padding-top: 10px;
+    font-weight: bold;
+  }
+
+  input {
+    margin: 0 0 0 0;
+	width: 100%;
+    min-height: 2em;
+    background-color: aliceblue;
+    border: 1px solid aliceblue;
+    color: #000;
+}
+
+.header2 {
+    color: aliceblue;
+    background-color: #28282B;
+    display: flex;
+    align-items: center; /* Vertically center items */
+    justify-content: space-between; /* Align items at the start and end of the container */
+    padding: 10px;
+}
+
+.header2 h1 {
+    margin: 0; /* Remove default margin for the h1 element */
+    flex: 1;
+    text-align: center; /* Center-align the heading */
+}
+
+input[type="file"] {
+    padding: 1px 2px;
+  }
+
+.customercard {
+    background-color: #0a0a23;
+    margin: 10px auto 0;
+    width: 50%;
+    color: aliceblue;
+    padding: 10px;
+    border-radius: 60px;
+}
+
+#edit-customer-form input {
+    background-color: hsl(223, 90%, 80%);
+}

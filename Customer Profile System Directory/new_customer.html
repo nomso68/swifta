@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Customer Profile</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="body2">
+    <header>
+        <div class="header2">
+            <a href="index.html">
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 512 512">
+                    <title>ionicons-v5-a</title>
+                    <polyline points="244 400 100 256 244 112" style="fill:none;stroke:aliceblue;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px"/>
+                    <line x1="120" y1="256" x2="412" y2="256" style="fill:none;stroke:aliceblue;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px"/>
+                </svg>
+            </a>
+            <h1>New Customer Profile</h1>
+        </div>
+    </header>
+    <main>
+        
+    <!-- Add New Customer Page -->
+        <div id="add-customer" >
+        <form id="add-customer-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+            <label for="image">Image URL:</label>
+            <input type="file" id="image" name="image" required><br>
+            <label for="phone">Phone:</label>
+            <input type="text" id="phone" name="phone" required><br>
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required><br>
+            <button id="add" type="submit">Add Customer</button>
+        </form>
+    </div>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>

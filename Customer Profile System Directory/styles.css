@@ -1,34 +1,34 @@
-body, .addButton {
-    font-family: Tahoma;
+body  {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin: 0;
-}
-
-body{
     text-align: center;
 }
 
-.header {
+.header, .header2 {
     text-align: center;
     padding: 10px 0px;        
-    background-color: #0a0a23;
-    color: #fff;
+    background-color: #17494d;
+    color: #FFF;
     width: 100%;
+    margin: 0; /* Remove default margin for the h1 element */
 }
 
 
 h1 {
     text-align: center;
+    text-transform: uppercase;
 }
 
 .addButton, #add, #save, #edit, #delete {
-    background-color: #000080;
+    font-family: Tahoma;
+    margin: 0;
+    background-color: #17494d;
     margin: 20px;
     border: none;
-    color: aliceblue;
+    color: #fff;
     padding: 10px;
     font-size: 16px;
-    border-radius: 8px;
-    font-weight: bold;
+    
 }
 
 #add, #save {
@@ -40,8 +40,8 @@ h1 {
 }
 
 #edit {
-    background-color: aliceblue;
-    color: #0a0a23;
+    background-color: #00a656;
+    color: #fff;
 }
 
 #edit, #delete {
@@ -49,10 +49,7 @@ h1 {
     width: 68px;
 }    
 
-.body2 {
-    background: #0a0a23;
-    color: aliceblue;
-}
+
 
 form {
     width: 60vw;
@@ -74,14 +71,12 @@ form {
     margin: 0 0 0 0;
 	width: 100%;
     min-height: 2em;
-    background-color: aliceblue;
-    border: 1px solid aliceblue;
+    background-color: #f1f2f2;
+    border: 1px solid #f1f2f2;
     color: #000;
 }
 
 .header2 {
-    color: aliceblue;
-    background-color: #28282B;
     display: flex;
     align-items: center; /* Vertically center items */
     justify-content: space-between; /* Align items at the start and end of the container */
@@ -89,7 +84,6 @@ form {
 }
 
 .header2 h1 {
-    margin: 0; /* Remove default margin for the h1 element */
     flex: 1;
     text-align: center; /* Center-align the heading */
 }
@@ -99,14 +93,14 @@ input[type="file"] {
   }
 
 .customercard {
-    background-color: #0a0a23;
+    background-color: #f8f9f9;
     margin: 10px auto 0;
-    width: 50%;
-    color: aliceblue;
+    width: 70%;
+    color: #17494d;
     padding: 10px;
-    border-radius: 60px;
+    border-bottom: 4px solid #00a656;
 }
 
 #edit-customer-form input {
-    background-color: hsl(223, 90%, 80%);
+    background-color: #f1f2f2;
 }

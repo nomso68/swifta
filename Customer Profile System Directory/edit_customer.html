@@ -7,7 +7,7 @@
     <title>Edit Customer</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body class="">
+<body>
 <header class="header2">
     <a href="index.html">
         <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 512 512">
@@ -19,19 +19,19 @@
     <h1>Edit Customer Profile</h1>
 </header>
 <main>
-    <form id="edit-customer-form">
-        <label for="image">Image:</label>
-        <input type="file" id="image" name="image" accept="image/*"><br>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required><br>
-        <label for="phone">Phone:</label>
-        <input type="text" id="phone" name="phone" required><br>
-        <label for="address">Address:</label>
-        <input type="text" id="address" name="address" required><br>
-        <!-- Display area for image URL -->
-        <div id="image-url"></div><br>
-        <button id="save" type="submit">Save Changes</button>
-    </form>
+    <div class="container">
+        <form id="edit-customer-form">
+            <label for="image">Image:</label>
+            <input type="text" id="image" name="image" required><br>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+            <label for="phone">Phone:</label>
+            <input type="text" id="phone" name="phone" required><br>
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required><br>
+            <button id="save" type="submit">Save Changes</button>
+        </form>
+    </div>
 </main>
 <script>
     // Function to edit a customer
@@ -51,6 +51,7 @@
         const index = parseInt(urlParams.get('index'));
         const cleanlist = JSON.parse(localStorage.getItem('items'));
         const customer = cleanlist[index];
+        document.getElementById('image').value = customer.image;
         document.getElementById('name').value = customer.name;
         document.getElementById('phone').value = customer.phone;
         document.getElementById('address').value = customer.address;
@@ -59,20 +60,6 @@
             document.getElementById('image-url').innerHTML = `Image URL: <a href="${customer.image}" target="_blank">${customer.image}</a>`;
         }
     };
-
-    // Event listener for file input change
-    document.getElementById('image').addEventListener('change', (event) => {
-        const file = event.target.files[0];
-        if (file) {
-            // Read file URL and display it
-            const reader = new FileReader();
-            reader.onload = (e) => {
-                const imageUrl = e.target.result;
-                document.getElementById('image-url').innerHTML = `Image URL: <a href="${imageUrl}" target="_blank">${imageUrl}</a>`;
-            };
-            reader.readAsDataURL(file);
-        }
-    });
 
     // Event listener for form submission
     document.getElementById('edit-customer-form').addEventListener('submit', (event) => {
